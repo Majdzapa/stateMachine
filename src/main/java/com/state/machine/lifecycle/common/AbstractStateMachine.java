@@ -15,7 +15,7 @@ import java.util.Optional;
 @SuperBuilder
 @Slf4j
 @Getter
-public abstract class AbstractStateMachine<S,E> {
+public abstract class AbstractStateMachine<S extends Enum<S>,E extends Enum<E>> {
 
     @Singular("transition")
     private final List<Transition<S,E>> transition;
