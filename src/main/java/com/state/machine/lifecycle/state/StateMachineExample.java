@@ -44,6 +44,6 @@ public class StateMachineExample extends AbstractStateMachine<MachineState,Machi
     public static StateMachineExample getInstance(){return INSTANCE;}
 
     private static List<MachineState> finalStates(){
-       return INSTANCE.getFinalState();
+       return getInstance().getFinalState();
     }
 }
